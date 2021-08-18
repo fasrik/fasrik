@@ -1,0 +1,304 @@
+/** @format */
+
+.navbar {
+	position: relative;
+	z-index: 1;
+}
+
+.navbar-brand {
+	font-family: 'viga';
+	font-size: 50px;
+}
+
+/*Jumbotron*/
+.jumbotron {
+	background-image: url(img/web-design.jpg);
+	background-size: cover;
+	height: 540px;
+	text-align: center;
+	position: relative;
+}
+.jumbotron .container {
+	z-index: 1;
+	position: relative;
+}
+
+.jumbotron::after {
+	content: '';
+	display: block;
+	width: 100%;
+	height: 100%;
+	background-image: linear-gradient(to top, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+	position: absolute;
+	bottom: 0;
+}
+.jumbotron .display-4 {
+	color: white;
+	padding-top: 150px;
+	font-weight: 200;
+	text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.6);
+	font-size: 40px;
+	margin-bottom: 30px;
+}
+.jumbotron .display-4 span {
+	font-weight: 500;
+}
+
+/*info pale*/
+.info-panel {
+	box-shadow: 0 3px 20px rgba(0, 0, 0, 0.5);
+	border-radius: 12px;
+	margin-top: -100px;
+	background-color: #fff;
+	z-index: 1;
+	padding: 30px;
+}
+
+.info-panel img {
+	width: 80px;
+	height: 80px;
+	margin-right: 20px;
+	margin-bottom: 20px;
+	float: left;
+}
+
+.info-panel h4 {
+	font-size: 16px;
+	text-transform: uppercase;
+	font-weight: bold;
+	margin-top: 5px;
+}
+
+.info-panel p {
+	font-size: 14px;
+	color: #acacac;
+	margin: -5px;
+	font-weight: 200;
+}
+
+/*workingspace*/
+.workingspace {
+	margin-top: 120px;
+	text-align: center;
+}
+
+.workingspace h3 span {
+	font-weight: 500;
+}
+
+.workingspace h3 {
+	font-size: 52px;
+	font-weight: 200;
+	text-transform: uppercase;
+	margin-top: 30px;
+}
+
+.workingspace p {
+	font-size: 18px;
+	color: #acacac;
+	font-weight: 200;
+}
+.workingspace img {
+	border-radius: 10px;
+}
+.testimonial {
+	margin-top: 100px;
+}
+.testimonial h5 {
+	text-align: center;
+	font-weight: 200;
+	font-style: italic;
+	font-size: 32px;
+}
+
+.testimonial figure img {
+	width: 90px;
+	margin-left: 35px;
+	margin-top: 30px;
+}
+
+.testimonial figure h5 {
+	font-style: 14px;
+	font-weight: bold;
+	font-style: normal;
+	color: blueviolet;
+}
+
+.testimonial figure p {
+	font-style: 12px;
+	color: #acacac;
+	margin-top: -10px;
+}
+
+.testimonial figcaption {
+	text-align: center;
+}
+/*Utility*/
+.tombol {
+	text-transform: uppercase;
+	border-radius: 40px;
+}
+
+/*--------------------------------------------------------------
+# Portfolio
+--------------------------------------------------------------*/
+.portfolio {
+	padding-bottom: 40px;
+}
+
+.portfolio #portfolio-flters {
+	padding: 0;
+	margin: 0 auto 25px auto;
+	list-style: none;
+	text-align: center;
+	border-radius: 50px;
+}
+
+.portfolio #portfolio-flters li {
+	cursor: pointer;
+	display: inline-block;
+	padding: 8px 16px 10px 16px;
+	font-size: 14px;
+	font-weight: 500;
+	line-height: 1;
+	color: #444444;
+	margin: 0 3px 10px 3px;
+	transition: all ease-in-out 0.3s;
+	background: #efefef;
+	border-radius: 50px;
+}
+
+.portfolio #portfolio-flters li:hover,
+.portfolio #portfolio-flters li.filter-active {
+	color: #fff;
+	background: #8fc04e;
+}
+
+.portfolio #portfolio-flters li:last-child {
+	margin-right: 0;
+}
+
+.portfolio .portfolio-item {
+	margin-bottom: 30px;
+	overflow: hidden;
+}
+
+.portfolio .portfolio-item img {
+	position: relative;
+	top: 0;
+	transition: all 0.6s cubic-bezier(0.645, 0.045, 0.355, 1);
+}
+
+.portfolio .portfolio-item .portfolio-info {
+	opacity: 0;
+	position: absolute;
+	left: 15px;
+	right: 15px;
+	bottom: -50px;
+	z-index: 3;
+	transition: all ease-in-out 0.3s;
+	background: #8fc04e;
+	padding: 15px 20px;
+}
+
+.portfolio .portfolio-item .portfolio-info h4 {
+	font-size: 18px;
+	color: #fff;
+	font-weight: 600;
+}
+.portfolio h2 {
+	margin-top: 30px;
+	margin-bottom: 20px;
+}
+
+.portfolio .portfolio-item .portfolio-info p {
+	color: #fff;
+	font-size: 14px;
+	margin-bottom: 0;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link,
+.portfolio .portfolio-item .portfolio-info .details-link {
+	position: absolute;
+	right: 50px;
+	font-size: 24px;
+	top: calc(50% - 18px);
+	color: white;
+	transition: ease-in-out 0.3s;
+}
+
+.portfolio .portfolio-item .portfolio-info .preview-link:hover,
+.portfolio .portfolio-item .portfolio-info .details-link:hover {
+	color: #d6e8bf;
+}
+
+.portfolio .portfolio-item .portfolio-info .details-link {
+	right: 15px;
+}
+
+.portfolio .portfolio-item:hover img {
+	top: -30px;
+}
+
+.portfolio .portfolio-item:hover .portfolio-info {
+	opacity: 1;
+	bottom: 0;
+}
+
+/*tentang saya*/
+.abouts img {
+	width: 300px;
+	margin-top: 60px;
+	margin-left: 20px;
+	border-bottom: 1px solid black;
+	border-top: 1px solid black;
+	border-left: 1px solid black;
+	border-right: 1px solid black;
+	box-shadow: 1px 0 1px;
+	border-radius: 20px;
+}
+.abouts h3 {
+	margin-top: 70px;
+	font-family: 'viga';
+}
+
+.isipostinganall {
+	width: 98%;
+	height: auto;
+	margin-bottom: 5px;
+	padding: 5px;
+}
+
+/*Desktop Version*/
+@media (min-width: 992px) {
+	.navbar-brand,
+	.nav-link {
+		color: white !important;
+		text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.7);
+	}
+	.nav-link {
+		margin-left: 20px;
+		text-transform: uppercase;
+	}
+	.nav-link:hover::after {
+		content: '';
+		display: block;
+		border-bottom: 3px solid rgb(252, 252, 253);
+		width: 50%;
+		margin: auto;
+		padding-bottom: 5px;
+		margin-bottom: -8px;
+	}
+	.jumbotron {
+		height: 640px;
+	}
+	.jumbotron .display-4 {
+		font-size: 62px;
+	}
+	.workingspace {
+		text-align: left;
+	}
+	.testimonial h5 {
+		font-style: 24px;
+	}
+}
